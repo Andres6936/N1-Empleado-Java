@@ -9,7 +9,6 @@ REM Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
 REM Ejercicio: N1-Elecciones-Java
 REM Autor: Joan Andrés Buriticá Salazar
 REM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-REM/
 
 SET CLASSPATH=
 
