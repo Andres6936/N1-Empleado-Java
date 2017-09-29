@@ -27,3 +27,6 @@ out/
 
 # Archivos generados por IDEA
 N1-Empleado-Java.iml
+
+# Archivos que no se ignoran
+!/test/lib/junit-4.12.jar
