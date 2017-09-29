@@ -186,7 +186,7 @@ public class InterfazEmpleado extends JFrame
         Empleado e = new Empleado( );
         e.inicializar( "Pedro", "Matallana", 1, fechaNacimiento, fechaIngreso, 1500000 );
 
-        e.cambiarImagen( "data/pm.jpg" );
+        e.cambiarImagen( "data/Empleado.jpg" );
 
         InterfazEmpleado femp = new InterfazEmpleado( e );
         femp.actualizarEmpleado( );
