@@ -1,6 +1,6 @@
-package org.jabs.empleado.test;
+package test.java.employee;
 
-import org.jabs.empleado.mundo.Fecha;
+import employee.mundo.Fecha;
 import junit.framework.TestCase;
 
 public class FechaTest extends TestCase

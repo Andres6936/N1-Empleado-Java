@@ -1,4 +1,4 @@
-package org.jabs.empleado.interfaz;
+package employee.interfaz;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

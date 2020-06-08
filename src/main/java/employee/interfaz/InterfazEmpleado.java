@@ -1,4 +1,4 @@
-package org.jabs.empleado.interfaz;
+package employee.interfaz;
 
 import java.awt.BorderLayout;
 
@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import org.jabs.empleado.mundo.Empleado;
-import org.jabs.empleado.mundo.Fecha;
+import employee.mundo.Empleado;
+import employee.mundo.Fecha;
 
 public class InterfazEmpleado extends JFrame
 {

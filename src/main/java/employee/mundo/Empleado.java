@@ -1,4 +1,4 @@
-package org.jabs.empleado.mundo;
+package employee.mundo;
 
 public class Empleado
 {

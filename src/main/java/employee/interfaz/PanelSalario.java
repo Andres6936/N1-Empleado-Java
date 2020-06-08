@@ -1,4 +1,4 @@
-package org.jabs.empleado.interfaz;
+package employee.interfaz;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;

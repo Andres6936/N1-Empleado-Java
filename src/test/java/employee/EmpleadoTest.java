@@ -1,7 +1,7 @@
-package org.jabs.empleado.test;
+package test.java.employee;
 
-import org.jabs.empleado.mundo.Empleado;
-import org.jabs.empleado.mundo.Fecha;
+import employee.mundo.Empleado;
+import employee.mundo.Fecha;
 import junit.framework.TestCase;
 
 public class EmpleadoTest extends TestCase

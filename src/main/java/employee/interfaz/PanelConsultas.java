@@ -1,4 +1,4 @@
-package org.jabs.empleado.interfaz;
+package employee.interfaz;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -15,7 +15,7 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
-import org.jabs.empleado.mundo.Empleado;
+import employee.mundo.Empleado;
 
 public class PanelConsultas extends JPanel implements ActionListener
 {
