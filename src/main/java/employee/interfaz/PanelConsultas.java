@@ -56,32 +56,17 @@ public class PanelConsultas extends JPanel implements ActionListener
     /**
      * El campo donde se muestra la edad
      */
-    private JTextField txtEdad;
+    private final JTextField txtEdad;
 
     /**
      * El campo donde se muestra la antigüedad
      */
-    private JTextField txtAntiguedad;
+    private final JTextField txtAntiguedad;
 
     /**
      * El campo donde se muestran las prestaciones
      */
-    private JTextField txtPrestaciones;
-
-    /**
-     * El botón para calcular la edad
-     */
-    private JButton butEdad;
-
-    /**
-     * El botón para calcular la antigüedad
-     */
-    private JButton butAntiguedad;
-
-    /**
-     * El botón para calcular las prestaciones
-     */
-    private JButton butPrestaciones;
+    private final JTextField txtPrestaciones;
 
     //-----------------------------------
     // Constructor
@@ -92,29 +77,32 @@ public class PanelConsultas extends JPanel implements ActionListener
      */
     public PanelConsultas( )
     {
-        GridBagLayout gridbag = new GridBagLayout( );
-        setLayout( gridbag );
-        setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Cálculos" ) ) );
+        GridBagLayout gridbag = new GridBagLayout();
+        setLayout(gridbag);
+        setBorder(new CompoundBorder(new EmptyBorder(0, 0, 5, 0), new TitledBorder("Cálculos")));
 
-        butEdad = new JButton( );
-        GridBagConstraints gbc = new GridBagConstraints( 0, 0, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( butEdad, gbc );
+        // El botón para calcular la edad
+        JButton butEdad = new JButton();
+        GridBagConstraints gbc = new GridBagConstraints(0, 0, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(5, 5, 5, 5), 0, 0);
+        add(butEdad, gbc);
 
-        butAntiguedad = new JButton( );
-        gbc = new GridBagConstraints( 0, 1, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( butAntiguedad, gbc );
+        // El botón para calcular la antigüedad
+        JButton butAntiguedad = new JButton();
+        gbc = new GridBagConstraints(0, 1, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(5, 5, 5, 5), 0, 0);
+        add(butAntiguedad, gbc);
 
-        butPrestaciones = new JButton( );
-        gbc = new GridBagConstraints( 0, 2, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( butPrestaciones, gbc );
+        // El botón para calcular las prestaciones
+        JButton butPrestaciones = new JButton();
+        gbc = new GridBagConstraints(0, 2, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(5, 5, 5, 5), 0, 0);
+        add(butPrestaciones, gbc);
 
-        txtEdad = new JTextField( 10 );
-        gbc = new GridBagConstraints( 1, 0, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( txtEdad, gbc );
-        txtEdad.setEnabled( false );
+        txtEdad = new JTextField(10);
+        gbc = new GridBagConstraints(1, 0, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(txtEdad, gbc);
+        txtEdad.setEnabled(false);
 
-        txtAntiguedad = new JTextField( 10 );
-        gbc = new GridBagConstraints( 1, 1, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
+        txtAntiguedad = new JTextField(10);
+        gbc = new GridBagConstraints(1, 1, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
         add( txtAntiguedad, gbc );
         txtAntiguedad.setEnabled( false );
 
