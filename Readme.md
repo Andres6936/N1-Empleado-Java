@@ -16,4 +16,6 @@ Para el cálculo de las prestaciones se utiliza la fórmula p = ( a * s ) / 12
 
 ## Interfaz
 
-![Logo](docs/specs/InterfazGUI.png)
+<p align="center">
+    <img src="docs/specs/InterfazGUI.png" alt="Interface"/>
+</p>
