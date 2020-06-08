@@ -33,26 +33,16 @@ public class PanelSalario extends JPanel implements ActionListener
     /**
      * Es una referencia a la interfaz de la aplicación
      */
-    private InterfazEmpleado interfazEmpleado;
+    private final InterfazEmpleado interfazEmpleado;
 
     //-----------------------------------------------------------------
     // Atributos de la Interfaz
     //-----------------------------------------------------------------
 
     /**
-     * Etiqueta para el salario
-     */
-    private JLabel labSalario;
-
-    /**
      * Es el campo de texto para el salario
      */
-    private JTextField txtSalario;
-
-    /**
-     * Es el botón para modificar el salario
-     */
-    private JButton botonModificarSalario;
+    private final JTextField txtSalario;
 
     //-----------------------------------
     // Constructor
@@ -67,23 +57,25 @@ public class PanelSalario extends JPanel implements ActionListener
     {
         interfazEmpleado = interfaz;
 
-        setLayout( new FlowLayout( ) );
+        setLayout(new FlowLayout());
 
-        labSalario = new JLabel( "Salario: " );
-        add( labSalario );
+        // Etiqueta para el salario
+        JLabel labSalario = new JLabel("Salario: ");
+        add(labSalario);
 
-        txtSalario = new JTextField( 10 );
-        add( txtSalario );
+        txtSalario = new JTextField(10);
+        add(txtSalario);
 
-        botonModificarSalario = new JButton( );
-        botonModificarSalario.setText( "Modificar" );
-        botonModificarSalario.setActionCommand( PanelSalario.BUT_MODIFICAR_SALARIO );
-        botonModificarSalario.addActionListener( this );
+        // Es el botón para modificar el salario
+        JButton botonModificarSalario = new JButton();
+        botonModificarSalario.setText("Modificar");
+        botonModificarSalario.setActionCommand(PanelSalario.BUT_MODIFICAR_SALARIO);
+        botonModificarSalario.addActionListener(this);
 
-        add( botonModificarSalario );
-        setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Salario" ) ) );
+        add(botonModificarSalario);
+        setBorder(new CompoundBorder(new EmptyBorder(0, 0, 5, 0), new TitledBorder("Salario")));
 
-        txtSalario.setEnabled( false );
+        txtSalario.setEnabled(false);
     }
 
     //-----------------------------------
