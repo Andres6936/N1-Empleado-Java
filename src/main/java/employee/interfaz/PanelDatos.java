@@ -20,62 +20,33 @@ public class PanelDatos extends JPanel
 {
 
     //-----------------------------------
-    // Constantes
-    //-----------------------------------
-
-    //-----------------------------------
     // Atributos
     //-----------------------------------
 
     /**
-     * Etiqueta del nombre
-     */
-    private JLabel labNombre;
-
-    /**
-     * Etiqueta del apellido
-     */
-    private JLabel labApellido;
-
-    /**
-     * Etiqueta de la fecha de ingreso
-     */
-    private JLabel labFIngreso;
-
-    /**
-     * Etiqueta de la fecha de nacimiento
-     */
-    private JLabel labFNacimiento;
-
-    /**
-     * Etiqueta del sexo
-     */
-    private JLabel labSexo;
-
-    /**
      * Campo de texto para el nombre
      */
-    private JTextField txtNombre;
+    private final JTextField txtNombre;
 
     /**
      * Campo de texto para el apellido
      */
-    private JTextField txtApellido;
+    private final JTextField txtApellido;
 
     /**
      * Campo de texto para la fecha de Ingreso
      */
-    private JTextField txtFIngreso;
+    private final JTextField txtFIngreso;
 
     /**
      * Campo de texto para la fecha de nacimiento
      */
-    private JTextField txtFNacimiento;
+    private final JTextField txtFNacimiento;
 
     /**
      * Campo de texto para el sexo
      */
-    private JTextField txtSexo;
+    private final JTextField txtSexo;
 
     /**
      * Etiqueta donde se muestra la imagen
@@ -91,39 +62,44 @@ public class PanelDatos extends JPanel
      */
     public PanelDatos( )
     {
-        GridBagLayout gridbag = new GridBagLayout( );
-        setLayout( gridbag );
-        setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Datos Personales" ) ) );
+        GridBagLayout gridbag = new GridBagLayout();
+        setLayout(gridbag);
+        setBorder(new CompoundBorder(new EmptyBorder(0, 0, 5, 0), new TitledBorder("Datos Personales")));
 
         GridBagConstraints gbc;
 
-        labNombre = new JLabel( "Nombre: " );
-        gbc = new GridBagConstraints( 0, 0, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( labNombre, gbc );
+        // Etiqueta del nombre
+        JLabel labNombre = new JLabel("Nombre: ");
+        gbc = new GridBagConstraints(0, 0, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(labNombre, gbc);
 
-        labApellido = new JLabel( "Apellido: " );
-        gbc = new GridBagConstraints( 0, 1, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( labApellido, gbc );
+        // Etiqueta del apellido
+        JLabel labApellido = new JLabel("Apellido: ");
+        gbc = new GridBagConstraints(0, 1, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(labApellido, gbc);
 
-        labSexo = new JLabel( "Sexo: " );
-        gbc = new GridBagConstraints( 0, 2, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( labSexo, gbc );
+        // Etiqueta del sexo
+        JLabel labSexo = new JLabel("Sexo: ");
+        gbc = new GridBagConstraints(0, 2, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(labSexo, gbc);
 
-        labFNacimiento = new JLabel( "Fecha de Nacimiento: " );
-        gbc = new GridBagConstraints( 0, 3, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( labFNacimiento, gbc );
+        // Etiqueta de la fecha de nacimiento
+        JLabel labFNacimiento = new JLabel("Fecha de Nacimiento: ");
+        gbc = new GridBagConstraints(0, 3, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(labFNacimiento, gbc);
 
-        labFIngreso = new JLabel( "Fecha de Ingreso: " );
-        gbc = new GridBagConstraints( 0, 4, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( labFIngreso, gbc );
+        // Etiqueta de la fecha de ingreso
+        JLabel labFIngreso = new JLabel("Fecha de Ingreso: ");
+        gbc = new GridBagConstraints(0, 4, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(labFIngreso, gbc);
 
-        txtNombre = new JTextField( 15 );
-        gbc = new GridBagConstraints( 1, 0, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
-        add( txtNombre, gbc );
-        txtNombre.setEnabled( false );
+        txtNombre = new JTextField(15);
+        gbc = new GridBagConstraints(1, 0, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
+        add(txtNombre, gbc);
+        txtNombre.setEnabled(false);
 
-        txtApellido = new JTextField( 15 );
-        gbc = new GridBagConstraints( 1, 1, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets( 5, 5, 5, 5 ), 0, 0 );
+        txtApellido = new JTextField(15);
+        gbc = new GridBagConstraints(1, 1, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 5, 5), 0, 0);
         add( txtApellido, gbc );
         txtApellido.setEnabled( false );
 
