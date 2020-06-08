@@ -192,8 +192,8 @@ public class PanelDatos extends JPanel
     private byte[] cargarImagen( String imagen ) throws IOException
     {
 
-        ByteArrayOutputStream baos = new ByteArrayOutputStream( );
-        FileInputStream fin = new FileInputStream( imagen );
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        FileInputStream fin = new FileInputStream(getClass().getClassLoader().getResource(imagen).getFile());
         int data = 0;
         while( data != -1 )
         {
