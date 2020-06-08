@@ -80,8 +80,7 @@ public class Empleado
      */
     public String darFechaIngreso( )
     {
-        String strFecha = fechaIngreso.toString( );
-        return strFecha;
+        return fechaIngreso.toString();
     }
 
     /**
@@ -90,8 +89,7 @@ public class Empleado
      */
     public String darFechaNacimiento( )
     {
-        String strFecha = fechaNacimiento.toString( );
-        return strFecha;
+        return fechaNacimiento.toString();
     }
 
     /**
@@ -141,9 +139,8 @@ public class Empleado
         hoy.inicializarHoy( );
 
         //Calcula la diferencia de años
-        int edad = fechaNacimiento.darDiferenciaEnMeses( hoy ) / 12;
 
-        return edad;
+        return fechaNacimiento.darDiferenciaEnMeses(hoy) / 12;
     }
 
     /**
@@ -157,9 +154,8 @@ public class Empleado
         hoy.inicializarHoy( );
 
         //Calcula la diferencia de años
-        int antiguedad = fechaIngreso.darDiferenciaEnMeses( hoy ) / 12;
 
-        return antiguedad;
+        return fechaIngreso.darDiferenciaEnMeses(hoy) / 12;
     }
 
     /**
@@ -170,8 +166,7 @@ public class Empleado
     public double darPrestaciones( )
     {
         int antiguedad = darAntiguedad( );
-        double prestaciones = ( ( double ) ( antiguedad * salario ) ) / 12;
-        return prestaciones;
+        return ((double)(antiguedad * salario)) / 12;
     }
 
     /**
