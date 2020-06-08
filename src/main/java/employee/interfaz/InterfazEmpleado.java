@@ -13,17 +13,13 @@ public class InterfazEmpleado extends JFrame
 {
 
     //-----------------------------------
-    // Constantes
-    //-----------------------------------
-
-    //-----------------------------------
     // Atributos
     //-----------------------------------
 
     /**
      * El empleado que se está mostrando
      */
-    private Empleado empleado;
+    private final Empleado empleado;
 
     //-----------------------------------------------------------------
     // Atributos de la interfaz
@@ -32,22 +28,17 @@ public class InterfazEmpleado extends JFrame
     /**
      * Es el panel que contiene los elementos para mostrar los datos del empleado
      */
-    private PanelDatos panelDatos;
+    private final PanelDatos panelDatos;
 
     /**
      * Es el panel que contiene los elementos para ver y modificar el salario del empleado
      */
-    private PanelSalario panelSalario;
+    private final PanelSalario panelSalario;
 
     /**
      * Es el panel que contiene los elementos para realizar consultas sobre el empleado
      */
-    private PanelConsultas panelConsultas;
-
-    /**
-     * Es el panel que contiene los elementos para ejecutar las extensiones a la aplicación
-     */
-    private PanelExtensiones panelExtensiones;
+    private final PanelConsultas panelConsultas;
 
     //-----------------------------------
     // Constructor
@@ -60,24 +51,26 @@ public class InterfazEmpleado extends JFrame
      */
     public InterfazEmpleado( Empleado e )
     {
-        setTitle( "Sistema de Empleados" );
+        setTitle("Sistema de Empleados");
 
         // construir los paneles
-        JPanel panelCentral = new JPanel( );
-        panelDatos = new PanelDatos( );
-        panelSalario = new PanelSalario( this );
-        panelConsultas = new PanelConsultas( );
-        panelExtensiones = new PanelExtensiones( this );
+        JPanel panelCentral = new JPanel();
+        panelDatos = new PanelDatos();
+        panelSalario = new PanelSalario(this);
+        panelConsultas = new PanelConsultas();
+
+        // Es el panel que contiene los elementos para ejecutar las extensiones a la aplicación
+        PanelExtensiones panelExtensiones = new PanelExtensiones(this);
 
         // organizar el panel principal
-        getContentPane( ).setLayout( new BorderLayout( ) );
-        getContentPane( ).add( panelDatos, BorderLayout.NORTH );
-        getContentPane( ).add( panelCentral, BorderLayout.CENTER );
-        getContentPane( ).add( panelExtensiones, BorderLayout.SOUTH );
+        getContentPane().setLayout(new BorderLayout());
+        getContentPane().add(panelDatos, BorderLayout.NORTH);
+        getContentPane().add(panelCentral, BorderLayout.CENTER);
+        getContentPane().add(panelExtensiones, BorderLayout.SOUTH);
 
         // organizar el panel central
-        panelCentral.setLayout( new BorderLayout( ) );
-        panelCentral.add( panelSalario, BorderLayout.NORTH );
+        panelCentral.setLayout(new BorderLayout());
+        panelCentral.add(panelSalario, BorderLayout.NORTH);
         panelCentral.add( panelConsultas, BorderLayout.CENTER );
 
         setSize( 530, 530 );
