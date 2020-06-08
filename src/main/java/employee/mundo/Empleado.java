@@ -135,7 +135,7 @@ public class Empleado
     public int darEdad( )
     {
         // Obtiene la fecha actual
-        Fecha hoy = new Fecha( );
+        Fecha hoy = new Fecha(1, 1, 1978);
         hoy.inicializarHoy( );
 
         //Calcula la diferencia de años
@@ -150,7 +150,7 @@ public class Empleado
     public int darAntiguedad( )
     {
         // Obtiene la fecha actual
-        Fecha hoy = new Fecha( );
+        Fecha hoy = new Fecha(1, 1, 1978);
         hoy.inicializarHoy( );
 
         //Calcula la diferencia de años

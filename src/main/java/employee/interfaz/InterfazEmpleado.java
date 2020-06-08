@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import com.formdev.flatlaf.FlatIntelliJLaf;
 import employee.mundo.Empleado;
 import employee.mundo.Fecha;
 
@@ -169,7 +170,7 @@ public class InterfazEmpleado extends JFrame
      */
     public static void main( String[] args )
     {
-
+        FlatIntelliJLaf.install();
         Fecha fechaNacimiento = new Fecha(16, 6, 1982);
         Fecha fechaIngreso = new Fecha(5, 4, 2000);
 
