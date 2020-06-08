@@ -170,19 +170,16 @@ public class InterfazEmpleado extends JFrame
     public static void main( String[] args )
     {
 
-        Fecha fechaNacimiento = new Fecha( );
-        fechaNacimiento.inicializar( 16, 6, 1982 );
+        Fecha fechaNacimiento = new Fecha(16, 6, 1982);
+        Fecha fechaIngreso = new Fecha(5, 4, 2000);
 
-        Fecha fechaIngreso = new Fecha( );
-        fechaIngreso.inicializar( 5, 4, 2000 );
+        Empleado e = new Empleado();
+        e.inicializar("Pedro", "Matallana", 1, fechaNacimiento, fechaIngreso, 1500000);
 
-        Empleado e = new Empleado( );
-        e.inicializar( "Pedro", "Matallana", 1, fechaNacimiento, fechaIngreso, 1500000 );
+        e.cambiarImagen("data/Empleado.jpg");
 
-        e.cambiarImagen( "data/Empleado.jpg" );
-
-        InterfazEmpleado femp = new InterfazEmpleado( e );
-        femp.actualizarEmpleado( );
-        femp.setVisible( true );
+        InterfazEmpleado femp = new InterfazEmpleado(e);
+        femp.actualizarEmpleado();
+        femp.setVisible(true);
     }
 }

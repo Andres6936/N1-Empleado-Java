@@ -7,10 +7,6 @@ public class Fecha
 {
 
     //-----------------------------------
-    // Constantes
-    //-----------------------------------
-
-    //-----------------------------------
     // Atributos
     //-----------------------------------
 
@@ -33,27 +29,24 @@ public class Fecha
     // Constructor
     //-----------------------------------
 
-    public Fecha()
-    {
-    }
-
-    //-----------------------------------
-    // Métodos
-    //-----------------------------------
-
     /**
      * Inicializa una fecha con los parámetros proporcionados <br>
      * <b>post: </b> El objeto fecha tiene sus datos básicos asignados con los parámetros proporcionados
+     *
      * @param d Día. d > 0 y d <= 31 y d es un valor válido según el mes
      * @param m Mes. m > 0 y m <= 12
      * @param a Año.
      */
-    public void inicializar( int d, int m, int a )
+    public Fecha(int d, int m, int a)
     {
         dia = d;
         mes = m;
         anio = a;
     }
+
+    //-----------------------------------
+    // Métodos
+    //-----------------------------------
 
     /**
      * Construye una nueva fecha inicializada en el día de hoy. <br>

@@ -46,12 +46,10 @@ public class EmpleadoTest extends TestCase
      */
     private void setupEscenario1( )
     {
-        empleado1 = new Empleado( );
-        Fecha fechaNacimiento = new Fecha( );
-        fechaNacimiento.inicializar( 14, 11, 1982 );
-        Fecha fechaIngreso = new Fecha( );
-        fechaIngreso.inicializar( 6, 10, 2002 );
-        empleado1.inicializar( "Pedro", "Pérez", 1, fechaNacimiento,  fechaIngreso, 1600000);
+        empleado1 = new Empleado();
+        Fecha fechaNacimiento = new Fecha(14, 11, 1982);
+        Fecha fechaIngreso = new Fecha(6, 10, 2002);
+        empleado1.inicializar("Pedro", "Pérez", 1, fechaNacimiento, fechaIngreso, 1600000);
     }
 
     /**
@@ -59,18 +57,15 @@ public class EmpleadoTest extends TestCase
      */
     private void setupEscenario2( )
     {
-        empleado2 = new Empleado( );
-        Fecha fechaNacimiento = new Fecha( );
-        fechaNacimiento.inicializar( 27, 4, 1975 );
-        Fecha fechaIngreso = new Fecha( );
-        fechaIngreso.inicializar( 2, 12, 2004 );
+        empleado2 = new Empleado();
+        Fecha fechaNacimiento = new Fecha(27, 4, 1975);
+        Fecha fechaIngreso = new Fecha(2, 12, 2004);
 
-        empleado2.inicializar( "María", "Rojas", 2, fechaNacimiento, fechaIngreso, 2000000 );
+        empleado2.inicializar("María", "Rojas", 2, fechaNacimiento, fechaIngreso, 2000000);
 
-        Fecha fecha = new Fecha( );
-        fecha.inicializar( 7, 6, 2004 );
-        empleado2.cambiarFechaIngreso( fecha );
-        empleado2.cambiarSalario( 1000000 );
+        Fecha fecha = new Fecha(7, 6, 2004);
+        empleado2.cambiarFechaIngreso(fecha);
+        empleado2.cambiarSalario(1000000);
     }
 
     /**
@@ -78,13 +73,11 @@ public class EmpleadoTest extends TestCase
      */
     private void setupEscenario3( )
     {
-        empleado3 = new Empleado( );
-        Fecha fechaNacimiento = new Fecha( );
-        fechaNacimiento.inicializar( 27, 4, 1975 );
-        Fecha fechaIngreso = new Fecha( );
-        fechaIngreso.inicializar( 6, 8, 2000 );
-        empleado3.inicializar( "Juan", "Rojas", 1, fechaNacimiento, fechaIngreso, 2500000  );
-        empleado3.cambiarImagen( "./imagenes/JuanRojas" );
+        empleado3 = new Empleado();
+        Fecha fechaNacimiento = new Fecha(27, 4, 1975);
+        Fecha fechaIngreso = new Fecha(6, 8, 2000);
+        empleado3.inicializar("Juan", "Rojas", 1, fechaNacimiento, fechaIngreso, 2500000);
+        empleado3.cambiarImagen("./imagenes/JuanRojas");
     }
 
     /**
@@ -95,8 +88,7 @@ public class EmpleadoTest extends TestCase
         setupEscenario1( );
         setupEscenario2( );
 
-        Fecha fIngreso = new Fecha( );
-        fIngreso.inicializar( 10, 10, 2004 );
+        Fecha fIngreso = new Fecha(10, 10, 2004);
 
         // Cambiar la fecha de ingreso de un empleado sin fecha de ingreso
         empleado1.cambiarFechaIngreso( fIngreso );
@@ -151,8 +143,7 @@ public class EmpleadoTest extends TestCase
     public void testDarAtributos( )
     {
         setupEscenario1( );
-        Fecha fecha1 = new Fecha( );
-        fecha1.inicializar( 14, 11, 1982 );
+        Fecha fecha1 = new Fecha(14, 11, 1982);
 
         assertEquals( "El nombre del empleado 1 es Pedro", "Pedro", empleado1.darNombre( ) );
         assertEquals( "El apellido del empleado 1 es Pérez", "Pérez", empleado1.darApellido( ) );
@@ -160,8 +151,7 @@ public class EmpleadoTest extends TestCase
         assertEquals( "La fecha de nacimiento del empleado 1 es " + fecha1, fecha1.toString( ), empleado1.darFechaNacimiento( ) );
 
         setupEscenario2( );
-        Fecha fecha2 = new Fecha( );
-        fecha2.inicializar( 27, 4, 1975 );
+        Fecha fecha2 = new Fecha(27, 4, 1975);
 
         assertEquals( "El nombre del empleado 2 es María", "María", empleado2.darNombre( ) );
         assertEquals( "El apellido del empleado 2 es Rojas", "Rojas", empleado2.darApellido( ) );
@@ -177,11 +167,10 @@ public class EmpleadoTest extends TestCase
         setupEscenario1( );
         setupEscenario2( );
 
-        Fecha hoy = new Fecha( );
+        Fecha hoy = new Fecha(1, 1, 1978);
         hoy.inicializarHoy( );
-        Fecha fechaIngreso = new Fecha( );
-        fechaIngreso.inicializar( 7, 6, 2004 );
-        int antiguedad = fechaIngreso.darDiferenciaEnMeses( hoy ) / 12;
+        Fecha fechaIngreso = new Fecha(7, 6, 2004);
+        int antiguedad = fechaIngreso.darDiferenciaEnMeses(hoy) / 12;
 
         // Verificar la antigüedad de un empleado con fecha de ingreso
         assertEquals( "El cálculo de la antigüedad está equivocado", antiguedad, empleado2.darAntiguedad( ) );
@@ -197,8 +186,7 @@ public class EmpleadoTest extends TestCase
         setupEscenario1( );
         setupEscenario2( );
 
-        Fecha fIngreso = new Fecha( );
-        fIngreso.inicializar( 7, 6, 2004 );
+        Fecha fIngreso = new Fecha(7, 6, 2004);
 
         // Verificar la fecha de ingreso de un empleado con fecha de ingreso
         assertEquals( "La fecha de ingreso del empleado 2 debe ser " + fIngreso, fIngreso.toString( ), empleado2.darFechaIngreso( ) );
