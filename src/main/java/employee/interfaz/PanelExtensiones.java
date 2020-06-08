@@ -34,21 +34,7 @@ public class PanelExtensiones extends JPanel implements ActionListener
     /**
      * Es la referencia a la interfaz de la aplicación
      */
-    private InterfazEmpleado interfazEmpleado;
-
-    //-----------------------------------------------------------------
-    // Atributos de la Interfaz
-    //-----------------------------------------------------------------
-
-    /**
-     * Es el botón 1
-     */
-    private JButton butOpcion1;
-
-    /**
-     * Es el botón 2
-     */
-    private JButton butOpcion2;
+    private final InterfazEmpleado interfazEmpleado;
 
     //-----------------------------------
     // Constructor
@@ -63,19 +49,21 @@ public class PanelExtensiones extends JPanel implements ActionListener
     {
         interfazEmpleado = interfaz;
 
-        setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Puntos de Extensión" ) ) );
+        setBorder(new CompoundBorder(new EmptyBorder(0, 0, 5, 0), new TitledBorder("Puntos de Extensión")));
+        setLayout(new FlowLayout());
 
-        setLayout( new FlowLayout( ) );
-        butOpcion1 = new JButton( "Opción 1" );
-        butOpcion1.setActionCommand( OPCION_1 );
-        butOpcion1.addActionListener( this );
+        // Es el botón 1
+        JButton butOpcion1 = new JButton("Opción 1");
+        butOpcion1.setActionCommand(OPCION_1);
+        butOpcion1.addActionListener(this);
 
-        butOpcion2 = new JButton( "Opción 2" );
-        butOpcion2.setActionCommand( OPCION_2 );
-        butOpcion2.addActionListener( this );
+        // Es el botón 2
+        JButton butOpcion2 = new JButton("Opción 2");
+        butOpcion2.setActionCommand(OPCION_2);
+        butOpcion2.addActionListener(this);
 
-        add( butOpcion1 );
-        add( butOpcion2 );
+        add(butOpcion1);
+        add(butOpcion2);
     }
 
     //-----------------------------------
