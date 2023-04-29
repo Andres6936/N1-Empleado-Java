@@ -9,6 +9,9 @@ plugins {
     id 'application'
 }
 
+// Compile the sources of Java with Suport to UTF-8
+compileJava.options.encoding = "UTF-8"
+
 // The vast majority of Java projects rely on libraries, so managing a
 // project’s dependencies is an important part of building a Java project.
 
@@ -24,8 +27,7 @@ plugins {
 
 repositories {
     // Here is where to look for the modules declared as dependencies.
-    // https://bintray.com/bintray/jcenter
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -44,20 +46,10 @@ dependencies {
 
 application {
     // Configure the application main class.
-    mainClassName = 'employee.interfaz.InterfazEmpleado'
+    mainClassName = 'employee.AppRunner'
 }
 
-// Executes a Java application in a child process.
-// ...
-// Type: JavaExec -> Starts a JVM with the given classpath and
-// application class (with the method main).
-// ...
-// Overwrite the task run.
-task run(type: JavaExec, overwrite: true) {
-
-    // Configure the application classpath.
-    classpath = sourceSets.main.runtimeClasspath
-
-    // Configure the application main class.
-    main = 'employee.interfaz.InterfazEmpleado'
+// Each compilation of Java sources is made with support to UTF-8
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
 }

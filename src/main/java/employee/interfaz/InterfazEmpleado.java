@@ -1,14 +1,10 @@
 package employee.interfaz;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import com.formdev.flatlaf.FlatIntelliJLaf;
 import employee.mundo.Empleado;
-import employee.mundo.Fecha;
+
+import javax.swing.*;
+import java.awt.*;
+
 
 public class InterfazEmpleado extends JFrame
 {
@@ -158,29 +154,5 @@ public class InterfazEmpleado extends JFrame
     {
         String respuesta = empleado.metodo2( );
         JOptionPane.showMessageDialog( this, respuesta, "Respuesta", JOptionPane.INFORMATION_MESSAGE );
-    }
-
-    //-----------------------------------------------------------------
-    // Main
-    //-----------------------------------------------------------------
-
-    /**
-     * Este método ejecuta la aplicación, creando una nueva interfaz e inicializándola con un empleado.
-     * @param args Los argumentos no son utilizados.
-     */
-    public static void main( String[] args )
-    {
-        FlatIntelliJLaf.install();
-        Fecha fechaNacimiento = new Fecha(16, 6, 1982);
-        Fecha fechaIngreso = new Fecha(5, 4, 2000);
-
-        Empleado e = new Empleado();
-        e.inicializar("Pedro", "Matallana", 1, fechaNacimiento, fechaIngreso, 1500000);
-
-        e.cambiarImagen("data/Empleado.jpg");
-
-        InterfazEmpleado femp = new InterfazEmpleado(e);
-        femp.actualizarEmpleado();
-        femp.setVisible(true);
     }
 }
